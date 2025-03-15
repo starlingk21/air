@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from "path"
 import tailwindcss from "@tailwindcss/vite"
 
 export default defineNuxtConfig({
@@ -12,9 +11,12 @@ export default defineNuxtConfig({
     dir: 'assets/'
   },
   css: ['~/assets/css/main.css'],
-  modules: [
-    '@nuxt/image'
-  ],
+  modules: ['@nuxt/image',
+    '@nuxtjs/google-fonts', {
+    families: {
+      Roboto: true,
+    }
+  }],
   vite: {
     plugins: [
       tailwindcss(),
