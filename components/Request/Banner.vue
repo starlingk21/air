@@ -9,7 +9,8 @@
 </script>
 
 <template>
-	<div class="banner px-6 py-4 flex-1 text-center rounded-[6px] text-[14px] leading-[21px] font-normal">
+	<div class="banner px-6 py-4 flex-1 text-center rounded-[6px] text-[14px] leading-[21px] font-normal"
+	     role="presentation">
 		<slot />
 	</div>
 </template>
