@@ -27,6 +27,13 @@
 		{ url: '/',  name: 'PINS' },
 		{ url: '/',  name: 'Special offers' },
 	])
+	
+	const breadcrumbs = ref([
+		{ url: '/', name: 'Home' },
+		{ url: '/', name: 'Contact us'},
+		{ url: '/',  name: 'Submit a claim' },
+		{ url: '/',  name: 'Damaged baggage' },
+	])
 </script>
 
 <template>
@@ -38,6 +45,8 @@
 			<HeaderMenu :nav-items="navigation" />
 		</div>
 	</div>
+	
+	<HeaderBreadcrumbs :breadcrumbs="breadcrumbs" />
 </template>
 
 <style scoped>
