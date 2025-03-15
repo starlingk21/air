@@ -9,9 +9,9 @@
 		<div class="content">
 			<slot />
 		</div>
-		
-		<Footer />
 	</div>
+	
+	<Footer />
 </template>
 
 <style scoped lang="scss">
