@@ -1,12 +1,12 @@
 <script setup lang="ts">
-	interface MenuItems {
+	interface MenuItem {
 		url: string
 		name: string
 	}
 	
 	const props = defineProps({
 		navItems: {
-			type: Object as PropType<MenuItems>,
+			type: Object as PropType<MenuItem>,
 			required: true,
 			default: () => {}
 		},

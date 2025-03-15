@@ -1,5 +1,5 @@
 <script setup lang="ts">
-	interface Options {
+	interface Option {
 		icon: string
 		alt: string
 		url: string
@@ -8,7 +8,7 @@
 	
 	const props = defineProps({
 		options: {
-			type: Object as PropType<Options>,
+			type: Object as PropType<Option>,
 			required: true,
 			default: () => {}
 		},
