@@ -15,9 +15,9 @@
 
 <template>
 	<nav v-if="navItems" class="nav-wrapper" role="navigation">
-		<ul class="nav-list flex text-[20px] leading-[24px] font-medium" role="list">
+		<ul class="nav-list flex text-[20px] leading-[24px]" role="list">
 			<li v-for="navItem in navItems" class="nav-list-item mr-[34px]" role="listitem">
-				<NuxtLink :to="navItem.url">{{ navItem.name }}</NuxtLink>
+				<NuxtLink class="font-normal" :to="navItem.url">{{ navItem.name }}</NuxtLink>
 			</li>
 		</ul>
 	</nav>

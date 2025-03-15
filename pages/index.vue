@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	request assistance page
+	homepage
 </template>
 
 <style scoped>

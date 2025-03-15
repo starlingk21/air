@@ -19,7 +19,7 @@
 </script>
 
 <template>
-	<div class="request-nav w-81" role="navigation">
+	<div class="request-nav w-81 mr-14 flex-1" role="navigation">
 		<ul class="nav-list rounded-md" role="list">
 			<li v-for="option in options"
 			    :class="['item px-6 py-3', { active: route.path === option.url }]"
