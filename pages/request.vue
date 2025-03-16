@@ -1,5 +1,13 @@
 <script setup lang="ts">
-
+	const flights = ref(1)
+	
+	const addFlight = () => {
+		flights.value++
+	}
+	
+	const deleteFlight = () => {
+		flights.value--
+	}
 </script>
 
 <template>
@@ -88,39 +96,47 @@
 						</div>
 						
 						<div class="form-inputs mr-12 flex-1" role="presentation">
-							<div class="field flex flex-col mt-7 mb-4" role="presentation">
-								<label class="mb-2 font-normal text-[12px] leading-[14px]" for="flight-number">Flight number</label>
-								<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
-								       type="text"
-								       id="flight-number" />
-							</div>
-							
-							<div class="field flex flex-col mt-7 mb-4" role="presentation">
-								<label class="mb-2 font-normal text-[12px] leading-[14px]" for="day">Flight date</label>
-								
-								<div class="date-wrapper flex gap-3">
+							<template v-for="(flight, index) in flights" :key="index">
+								<div class="field flex flex-col mt-7 mb-4" role="presentation">
+									<label class="mb-2 font-normal text-[12px] leading-[14px]" for="flight-number">Flight number</label>
 									<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
 									       type="text"
-									       id="day"
-									       placeholder="DD" />
-									
-									<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
-									       type="text"
-									       id="month"
-									       placeholder="MM" />
-									
-									<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
-									       type="text"
-									       id="year"
-									       placeholder="YYYY" />
+									       id="flight-number" />
 								</div>
 								
-								<span class="font-normal text-[12px] leading-[14px] mt-2">For example:  30  8  1972</span>
-							</div>
+								<div class="field flex flex-col mt-7 mb-4" role="presentation">
+									<label class="mb-2 font-normal text-[12px] leading-[14px]" for="day">Flight date</label>
+									
+									<div class="date-wrapper flex gap-3">
+										<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
+										       type="text"
+										       id="day"
+										       placeholder="DD" />
+										
+										<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
+										       type="text"
+										       id="month"
+										       placeholder="MM" />
+										
+										<input class="bg-white p-3 font-normal text-[16px] leading-[20px] outline-none"
+										       type="text"
+										       id="year"
+										       placeholder="YYYY" />
+									</div>
+									
+									<span class="font-normal text-[12px] leading-[14px] mt-2">For example:  30  8  1972</span>
+								</div>
+							</template>
 							
 							<div class="form-inputs mr-12 flex-1 my-8" role="presentation">
-								<button class="btn secondary h-13 w-40 rounded-[4px] text-white font-bold text-[14px] leading-[14px] cursor-pointer">
+								<button class="btn secondary h-13 w-40 rounded-[4px] text-white font-bold text-[14px] leading-[14px] cursor-pointer"
+								        @click="addFlight">
 									Add flight
+								</button>
+								
+								<button v-if="flights > 1" class="btn delete h-13 w-40 font-bold text-[14px] leading-[14px] cursor-pointer"
+								        @click="deleteFlight">
+									Delete flight
 								</button>
 							</div>
 						</div>
@@ -181,6 +197,12 @@
 			background: transparent;
 			border: 1px solid #313892;
 			color: #313892;
+		}
+		
+		&.delete {
+			background: transparent;
+			border: none;
+			color: #152649a3;
 		}
 	}
 </style>
