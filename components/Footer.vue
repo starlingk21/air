@@ -9,29 +9,24 @@
 			<FooterNewsletter />
 		</div>
 		
+		<FooterCopyrights class="mobile-copyrights" />
+		
 		<div class="partners-and-social pb-8 flex items-center justify-between" role="presentation">
 			<FooterPartners />
-			<FooterSocial />
+			<FooterSocial class="desktop-socials" />
 		</div>
 		
-		<div class="information py-5 flex items-center justify-between" role="presentation">
-			<div class="docs flex gap-13">
-				<NuxtLink class="font-normal text-[13px] leading-[36px]" to="/" target="_blank">Legal information</NuxtLink>
-				<NuxtLink class="font-normal text-[13px] leading-[36px]" to="/" target="_blank">Site index</NuxtLink>
-				<NuxtLink class="font-normal text-[13px] leading-[36px]" to="/" target="_blank">Technical requirements</NuxtLink>
-			</div>
-			
-			<div class="copyrights font-normal text-[13px] leading-[16px]">
-				© 2017 airBaltic
-			</div>
-		</div>
-		
+		<FooterCopyrights class="desktop-copyrights" />
 	</div>
 </template>
 
 <style scoped lang="scss">
 	.footer {
 		background-color: #f9f9f9;
+		
+		.mobile-copyrights {
+			display: none;
+		}
 	}
 	
 	.support-section,
@@ -42,5 +37,34 @@
 	
 	.partners-and-social {
 		border-bottom: 1px solid #ced2d7;
+	}
+	
+	@include breakpoint(medium) {
+		.footer {
+			margin-top: 16px;
+			
+			.support-section {
+				margin: 0 20px;
+				flex-direction: column;
+				
+				.tabs-wrapper {
+					flex-direction: column;
+				}
+			}
+			
+			.desktop-socials,
+			.desktop-copyrights {
+				display: none;
+			}
+			
+			.mobile-copyrights {
+				margin: 0 20px;
+			}
+			
+			.partners-and-social {
+				margin: 0 20px;
+				padding-bottom: 48px;
+			}
+		}
 	}
 </style>

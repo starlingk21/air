@@ -62,4 +62,10 @@
 			}
 		}
 	}
+	
+	@include breakpoint(large) {
+		.request-nav {
+			display: none;
+		}
+	}
 </style>

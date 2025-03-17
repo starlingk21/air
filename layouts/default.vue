@@ -18,4 +18,16 @@
 	.app-layout {
 		margin: 0 140px;
 	}
+	
+	@include breakpoint(large) {
+		.app-layout {
+			margin: 0 40px;
+		}
+	}
+	
+	@include breakpoint(medium) {
+		.app-layout {
+			margin: 0;
+		}
+	}
 </style>

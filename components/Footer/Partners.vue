@@ -4,7 +4,7 @@
 
 <template>
 	<div class="partners-wrapper flex" role="presentation">
-		<div class="partners-one pr-10" role="presentation">
+		<div class="partners-one desktop pr-10" role="presentation">
 			<NuxtImg src="images/geotrust.png" alt="geotrust-logo" width="115px" />
 		</div>
 		
@@ -20,6 +20,10 @@
 			<NuxtImg src="images/capa.png" alt="geotrust-logo" width="85px" />
 			<NuxtImg src="images/punctual.png" alt="geotrust-logo" width="107px" />
 		</div>
+		
+		<div class="partners-one mobile pr-10" role="presentation">
+			<NuxtImg src="images/geotrust.png" alt="geotrust-logo" width="115px" />
+		</div>
 	</div>
 </template>
 
@@ -27,5 +31,38 @@
 	.partners-one,
 	.partners-two {
 		border-right: 1px solid #ced2d7;
+	}
+	
+	.partners-one.mobile {
+		display: none;
+	}
+	
+	@include breakpoint(medium) {
+		.partners-wrapper {
+			flex-direction: column;
+			flex: 1;
+			
+			.partners-one {
+				&.desktop {
+					display: none;
+				}
+				
+				&.mobile {
+					display: block;
+				}
+			}
+			
+			.partners-two {
+				justify-content: space-between;
+			}
+			
+			.partners-one,
+			.partners-two,
+			.partners-three {
+				border-right: none;
+				padding: 16px 0;
+				border-top: 1px solid #ced2d7;
+			}
+		}
 	}
 </style>

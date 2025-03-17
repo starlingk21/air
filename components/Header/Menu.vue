@@ -30,6 +30,5 @@
 		&:last-child {
 			margin: 0;
 		}
-	;
 	}
 </style>

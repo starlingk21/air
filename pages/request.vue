@@ -17,9 +17,9 @@
 		<div class="request-details flex-1" role="presentation">
 			<h1 class="text-[40px] font-light leading-[47px]">Request assistance from us</h1>
 			
-			<p class="text-[20px] font-light leading-[28px] my-10">Providing assistance to passengers with reduced mobility is part of our service at airBaltic.</p>
+			<p class="details-text text-[20px] font-light leading-[28px] my-10">Providing assistance to passengers with reduced mobility is part of our service at airBaltic.</p>
 			
-			<div>
+			<div class="steps-list-wrapper" role="presentation">
 				<h6 class="text-[16px] leading-[19px] font-medium mb-4">We can help you:</h6>
 				
 				<ul class="steps-list columns-2 ml-5 list-disc" role="list">
@@ -128,7 +128,7 @@
 								</div>
 							</template>
 							
-							<div class="form-inputs mr-12 flex-1 my-8" role="presentation">
+							<div class="buttons-wrapper mr-12 flex-1 my-8" role="presentation">
 								<button class="btn secondary h-13 w-40 rounded-[4px] text-white font-bold text-[14px] leading-[14px] cursor-pointer"
 								        @click="addFlight">
 									Add flight
@@ -203,6 +203,70 @@
 			background: transparent;
 			border: none;
 			color: #152649a3;
+		}
+	}
+	
+	@include breakpoint(medium) {
+		.request-page-wrapper {
+			margin-top: 0;
+			
+			.request-details {
+				
+				.details-text, h1, .steps-list-wrapper {
+					margin-left: 20px;
+					margin-right: 20px;
+				}
+				
+				.details-text {
+					margin-top: 20px;
+					margin-bottom: 20px;
+				}
+			}
+			
+			.steps-list {
+				columns: 1;
+			}
+			
+			.banner-wrapper {
+				flex-direction: column;
+				gap: 0;
+			}
+			
+			.section-one,
+			.section-two,
+			.actions {
+				flex-direction: column;
+				gap: 24px;
+				
+				.details {
+					padding-bottom: 0;
+					padding-left: 20px;
+				}
+				
+				.field {
+					margin-top: 20px;
+				}
+				
+				.form-inputs {
+					margin: 0 20px;
+					
+					.field input {
+						width: 100%;
+					}
+				}
+			}
+			
+			.actions .btn.primary {
+				width: 100%;
+			}
+			
+			.form-inputs {
+				
+				.buttons-wrapper {
+					display: flex;
+					margin: 32px 0 36px 0;
+				}
+			}
 		}
 	}
 </style>
