@@ -1,75 +1,31 @@
-# Nuxt Minimal Starter
+# airBaltic application
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Project setup (dev env.)
+- `npm i`
+- `npm run dev`
 
-## Setup
+## Packages and other used materials
+- `Nuxt3`
+- `Typescript`
+- `sass` - styling, mixins for vue components.
+- `@nuxt/image` = for image optimization in nuxt
+- `tailwind` - styling
+- `pinia` - state management
+- `zod` - validation
+- `@nuxtjs/google-fonts` - Proper font usage for the project
 
-Make sure to install dependencies:
+### Multiple things I would do if would have more time
+- Fix all the styling bugs
+- If design would be available, - implement tablet view
+- Create (atleast empty) pages for routing and testing
+- Mobile navigation implementation
+- Breadcrumbs with real routes
+- For flight dates proper dates validation and saving in the state
+- Possibly missed places to use tailwind.
+- Bugfix in the footer for the newsletter (missing icon)
 
-```bash
-# npm
-npm install
+Probably there are many more things like cypress and other things which can be drastically improved, but tried to make the best I could in the time I had.
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Total time spent 2 days (around 18 hours)
+- No previous knowledge in Zod and lack of experience with tailwind.
+- Tried to follow the best practices, including the screen readers attributes.
