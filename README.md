@@ -1,6 +1,6 @@
 # airBaltic application
 
-## Project setup (dev env.)
+## Project setup
 - `npm i`
 - `npm run dev`
 
