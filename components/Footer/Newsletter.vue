@@ -11,6 +11,8 @@
 		       id="subscribe"
 		       placeholder="Enter your e-mail" />
 		
+		<FooterSocial class="mobile-socials" />
+		
 		<div class="redirect-details relative">
 			<NuxtImg class="redirect-icon" src="icons/redirect.svg" width="16px" alt="redirect-icon" />
 			<span class="font-normal text-[12px] leading-4">This indicates a link to an external site that may not follow the same accessibility policies.</span>
@@ -30,6 +32,34 @@
 			position: absolute;
 			top: 8px;
 			left: -24px;
+		}
+	}
+	
+	.mobile-socials {
+		display: none;
+	}
+	
+	@include breakpoint(medium) {
+		.newsletter-wrapper {
+			width: 100%;
+			
+			h3 {
+				margin-top: 8px;
+			}
+			
+			input {
+				width: 100%;
+				margin-bottom: 30px;
+			}
+			
+			.redirect-details {
+				margin-left: 24px;
+			}
+			
+			.mobile-socials {
+				display: flex;
+				margin-bottom: 36px;
+			}
 		}
 	}
 </style>

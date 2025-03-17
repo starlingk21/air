@@ -3,7 +3,9 @@
 </script>
 
 <template>
-	homepage
+	<NuxtLink to="/request" class="request-link underline">
+		Go to request page
+	</NuxtLink>
 </template>
 
 <style scoped>
